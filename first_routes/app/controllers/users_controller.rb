@@ -20,9 +20,24 @@ class UsersController < ApplicationController
             render json: user
         else
             render plain: "Could not find user"
+        end
     end
 
-    def
+
+    def update
+        user = User.find_by(id: params[:id])
+        if user.update(user_params)
+            render json: user
+        else
+            render json: user.errors.full_messages, status: :unprocessable_entity
+        end
+    end
+
+    def destroy
+        user = User.find_by(id: params[:id])
+        user.destroy
+        redirect_to users_url
+    end
 
     def user_params
         params.require(:user).permit(:name, :email)
