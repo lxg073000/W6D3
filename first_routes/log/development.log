@@ -1,0 +1,72 @@
+Started GET "/" for ::1 at 2021-02-03 14:13:39 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/parth/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/parth/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (1.4ms)
+Completed 200 OK in 12ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2021-02-03 14:16:34 -0500
+
+AbstractController::ActionNotFound - The action 'index' could not be found for UsersController:
+
+Started GET "/users" for ::1 at 2021-02-03 14:18:52 -0500
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2021-02-03 14:19:01 -0500
+Processing by UsersController#index as */*
+No template found for UsersController#index, rendering head :no_content
+Completed 204 No Content in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2021-02-03 14:19:50 -0500
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?fav_food=pizza?admin=true" for ::1 at 2021-02-03 14:22:11 -0500
+Processing by UsersController#index as */*
+  Parameters: {"fav_food"=>"pizza?admin=true"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?fav_food=pizza" for ::1 at 2021-02-03 14:22:44 -0500
+Processing by UsersController#index as */*
+  Parameters: {"fav_food"=>"pizza"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2021-02-03 14:24:50 -0500
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users" for ::1 at 2021-02-03 14:25:58 -0500
+Processing by UsersController#create as */*
+  Parameters: {"pizza"=>"pepperoni"}
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2021-02-03 14:27:44 -0500
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started GET "/users/2" for ::1 at 2021-02-03 14:28:13 -0500
+Processing by UsersController#show as */*
+  Parameters: {"pizza"=>"pepperoni", "id"=>"2"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for ::1 at 2021-02-03 14:28:22 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
