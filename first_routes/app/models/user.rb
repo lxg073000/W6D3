@@ -10,8 +10,8 @@ class User < ApplicationRecord
     class_name: :ArtworkShare
 
   has_many :shared_artworks,
-  through: :artwork_shares,
-  source: :artwork
+    through: :artwork_shares,
+    source: :artwork
 
   
 end
